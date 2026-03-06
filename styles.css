@@ -139,9 +139,14 @@ main [id] {
     padding-top: 2.5rem;
   }
 
+  .brand-mark {
+    max-width: calc(100% - 64px);
+    overflow: hidden;
+  }
+
   .brand-logo {
-    width: auto;
-    height: 44px;
-    transform: scale(1.28);
+    height: 36px;
+    max-width: 58vw;
+    transform: none;
   }
 }
