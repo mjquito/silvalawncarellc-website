@@ -47,9 +47,22 @@ h3,
 }
 
 .brand-mark {
+  display: inline-flex;
+  align-items: center;
   color: var(--ink);
   font-weight: 700;
   letter-spacing: 0.2px;
+  overflow: visible;
+}
+
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1.42);
+  transform-origin: left center;
 }
 
 .navbar-nav .nav-link {
@@ -124,5 +137,11 @@ main [id] {
 @media (max-width: 991.98px) {
   .hero-section {
     padding-top: 2.5rem;
+  }
+
+  .brand-logo {
+    width: auto;
+    height: 44px;
+    transform: scale(1.28);
   }
 }
