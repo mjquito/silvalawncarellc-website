@@ -13,6 +13,9 @@
 		href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Sora:wght@500;600;700&display=swap"
 		rel="stylesheet" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -204,10 +207,29 @@
 		<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
 			<p class="mb-0 fw-semibold">Silva Lawncare LLC</p>
 			<p class="mb-0 text-muted">Mon-Sat: 7:00 AM - 6:00 PM</p>
+			<a class="gbp-link" href="https://maps.app.goo.gl/PScefd8F84uc42aB7" aria-label="Google Business Profile" target="_blank">
+				<i class="fa-brands fa-google gbp-icon" aria-hidden="true"></i>
+				<span>Google Business Profile</span>
+			</a>
 		</div>
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		(() => {
+			const stickyHeader = document.querySelector("header.sticky-top");
+			if (!stickyHeader) return;
+
+			const updateStickyOffset = () => {
+				const headerHeight = stickyHeader.getBoundingClientRect().height;
+				document.documentElement.style.setProperty("--sticky-offset", `${Math.ceil(headerHeight)}px`);
+			};
+
+			updateStickyOffset();
+			window.addEventListener("resize", updateStickyOffset);
+			window.addEventListener("load", updateStickyOffset);
+		})();
+	</script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@
   --brand: #2f6a3e;
   --brand-deep: #214f2d;
   --gold: #d9a441;
+  --sticky-offset: 120px;
 }
 
 html,
@@ -95,6 +96,29 @@ h3,
   border-radius: 1.25rem;
   color: #f6fbf7;
   background: linear-gradient(120deg, #1f4b2b, #357547);
+}
+
+main [id] {
+  scroll-margin-top: calc(var(--sticky-offset) + 12px);
+}
+
+.gbp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.gbp-link:hover {
+  color: var(--brand);
+}
+
+.gbp-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
 }
 
 @media (max-width: 991.98px) {
